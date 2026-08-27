@@ -9,7 +9,6 @@
 // (an alarm time, and a way to check if it's ringing) and reuses CClock's
 // time-keeping behaviour (Tick, GetTime, Reset, Report) for free.
 //
-// Copyright (c) Donald Dansereau, 2026
 
 //--Includes-------------------------------------------------------------------
 #include <iostream>
