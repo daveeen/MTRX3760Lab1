@@ -10,7 +10,6 @@ CController::CController() //cTor, init count to 0 and set all subsystems to NUL
     mSubsystems[i] = NULL;
 }
 // virtual dTor, deletes all subsystems that were added to the controller
-//Since the controller have pointers to the subsystems, it needs to clean up memory when the controller is destroyed.
 CController::~CController()
 {
   for( int i = 0; i < mCount; i++ )

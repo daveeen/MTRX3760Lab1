@@ -8,7 +8,7 @@
 int main()
 {
   //User input for speed mode, ensuring it is between 1 and 5
-    int mode = 0;
+  int mode = 0;
   while( mode < 1 || mode > 5 )
   {
     std::cout << "Enter speed mode (1-5): ";
