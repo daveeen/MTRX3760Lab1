@@ -7,7 +7,7 @@
 // The constructor starts the scan count at zero and sets an initial
 // placeholder tag ID, using the member initialiser list.
 CRFIDScanner::CRFIDScanner()
-  : mScanCount( 0 ),
+  : CSubsystem( "RFIDScanner" ), mScanCount( 0 ),
     mLastTagID( "NONE" )
 {
 }
@@ -23,6 +23,6 @@ void CRFIDScanner::Step()
 // Report prints the total scan count and the most recently read tag ID.
 void CRFIDScanner::Report()
 {
-  std::cout << "[RFIDScanner] scans: " << mScanCount
+  std::cout << "[" << mName << "] scans: " << mScanCount
             << ", last tag: " << mLastTagID << std::endl;
 }

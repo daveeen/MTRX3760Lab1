@@ -12,8 +12,9 @@
 class CDriveMotor: public CSubsystem
 {
   public:
-    // Creates a drive motor with a given constant speed, in units per cycle.
-    CDriveMotor( double aSpeed );
+    // Creates a drive motor at a given speed mode (1–5).
+    // Mode 1 = 10 km/h,  additional modes adds 20 km/h.
+    CDriveMotor( int aMode );
 
     // Step advances the motor by one cycle, moving it forward by mSpeed.
     void Step();
@@ -22,8 +23,9 @@ class CDriveMotor: public CSubsystem
     void Report();
 
   private:
-    double mSpeed;               // constant speed, in units per cycle
-    double mDistanceTravelled;   // total distance accumulated so far
+    static const double CYCLE_TIME_H;   // duration of one control cycle, in hours
+    double mSpeed;                      // speed in km/h
+    double mDistanceTravelled;          // total distance travelled in km
 };
 
 #endif
