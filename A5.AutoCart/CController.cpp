@@ -6,7 +6,7 @@
 CController::CController() //cTor, init count to 0 and set all subsystems to NULL
   : mCount( 0 )
 {
-  for( int i = 0; i < MAX_SUBSYSTEMS; i++ )
+  for( int i = 0; i < 10; i++ )
     mSubsystems[i] = NULL;
 }
 // virtual dTor, deletes all subsystems that were added to the controller
@@ -18,7 +18,7 @@ CController::~CController()
 // AddSubsystem adds a new subsystem to the controller by using pointers. Checking if there is space for a new subsystem through mCount.
 void CController::AddSubsystem( CSubsystem* aSub )
 {
-  if( mCount < MAX_SUBSYSTEMS )
+  if( mCount < 10 )
   {
     mSubsystems[mCount] = aSub;
     mCount++;

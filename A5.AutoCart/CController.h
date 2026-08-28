@@ -22,8 +22,7 @@ class CController
     void Report();
 
   private:
-    static const int MAX_SUBSYSTEMS = 10;
-    CSubsystem* mSubsystems[MAX_SUBSYSTEMS];
+    CSubsystem* mSubsystems[10];   // supports up to 10 subsystems
     int mCount;
 };
 

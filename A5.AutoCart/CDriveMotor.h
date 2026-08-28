@@ -23,9 +23,8 @@ class CDriveMotor: public CSubsystem
     void Report();
 
   private:
-    static const double CYCLE_TIME_H;   // duration of one control cycle, in hours
-    double mSpeed;                      // speed in km/h
-    double mDistanceTravelled;          // total distance travelled in km
+    double mSpeed;             // speed in km/h
+    double mDistanceTravelled; // total distance travelled in km
 };
 
 #endif

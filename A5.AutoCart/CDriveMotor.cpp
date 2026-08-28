@@ -3,9 +3,6 @@
 #include <iostream>
 #include "CDriveMotor.h"
 
-// 30 minutes per control cycle.
-const double CDriveMotor::CYCLE_TIME_H = 0.5;
-
 // Setting the speed based on the user input mode
 // initializing distance travelled to 0
 CDriveMotor::CDriveMotor( int aMode )
@@ -16,7 +13,7 @@ CDriveMotor::CDriveMotor( int aMode )
 //-------------------------------------------------------------------------
 void CDriveMotor::Step()
 {
-  mDistanceTravelled += mSpeed * CYCLE_TIME_H;
+  mDistanceTravelled += mSpeed * 0.5;  // 30 minutes per cycle (0.5 hours)
 }
 //-------------------------------------------------------------------------
 void CDriveMotor::Report()
